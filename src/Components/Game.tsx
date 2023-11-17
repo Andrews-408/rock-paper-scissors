@@ -10,7 +10,7 @@ const Game = () => {
     const [playerChoice, setPlayerChoice] = useState('')
     const [aiChoice, setAiChoice] = useState('')
     const [showResults, setShowResults] = useState(false)
-    const [score, setScore] = useState<number>(0)
+    const [score, setScore] = useState(0)
     const [winner, setWinner] = useState('')
 
     

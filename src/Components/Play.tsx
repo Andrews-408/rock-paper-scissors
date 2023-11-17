@@ -22,24 +22,30 @@ const Play: React.FC<IPlayProps> = ({setShowResults, setPlayerChoice, setAiChoic
         setAiChoice(choices[computer])
         
         if(id===0 && computer===1){
-            setWinner("Computer")
+            setWinner("Computer");
+            setScore(prev=> prev - 1);
         }else if(id===0 && computer===2){
-            setWinner("Player")
+            setWinner("Player");
+            setScore(prev=> prev + 1);
         }else if(id===1 && computer===0){
-            setWinner("Player")
+            setWinner("Player");
+            setScore(prev=> prev + 1);
         }else if(id===1 && computer===2){
-            setWinner("Computer")
+            setScore(prev=> prev - 1);
+            setWinner("Computer");
         }else if(id===2 && computer === 0){
+            setScore(prev=> prev - 1);
             setWinner("Computer")
         }else if(id=== 2 && computer=== 1){
             setWinner("Player")
+            setScore(prev=> prev + 1);
     
         }else{
             setWinner("Tie")
 
         }
-        
         setShowResults(true);
+        
     }
             
                
